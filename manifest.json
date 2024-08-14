@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Hide Google Login Pop-ups",
+  "version": "1.0",
+  "description": "Hides Google login pop-ups on all websites.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
